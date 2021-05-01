@@ -23,7 +23,7 @@ class GridNews extends HTMLElement{
       img{
         width: 100%;
       }
-      .container:nth-child(1){
+      :host .container:nth-child(1){
         background: yellow;
      }
     </style>
@@ -38,9 +38,7 @@ class GridNews extends HTMLElement{
         </p>
       </div>
       <div class="news">
-        <p>${this._dataNews.content === null ? "" : this._dataNews.content}...</p>
-       
-        </div>
+        <p>${this._dataNews.content === null ? "" : this._dataNews.content}...</p> 
       </div>
     </div>
     `;
