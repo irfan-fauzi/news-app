@@ -23,64 +23,25 @@ class GridNews extends HTMLElement{
       img{
         width: 100%;
       }
-      
-      h2{
-        font-family: 'Arial';
-        font-weight: 800;
-        font-size: 1.8rem;
-        letter-spacing: 2px;
-        color: #46484d;
-        
-      }
-      .container{
-        
-        max-width: 1500px;
-        margin: auto;
-      }
-     
-      
-      .box{
-        border: #eaeaea solid 1px;
-      }
-      p{
-        font-family: 'Arial';
-        letter-spacing: 2px;
-      }
-      .news{
-        font-size: 1rem;
-        font-weight: 400;
-        color: grey;
-      }
-      .btn{
-        padding: 1rem 2rem;
-        background: #46484d;
-        color: #fff;
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-weight: bold;
-        border-radius: 10px;
-        cursor: pointer;
-      }
+      .container:nth-child(1){
+        background: yellow;
+     }
     </style>
     <div class="container">
-     <div class="box">
       <div class="img-wrap">
         <img src=${this._dataNews.urlToImage} alt="kompas">
       </div>
-      <div class="text-wrap">
-        <div class="title-wrap">
+      <div class="title">
         <h2>${this._dataNews.title}</h2>
         <p>
-          ${this._dataNews.author}
+          ${this._dataNews.author === null ? "" : this._dataNews.author}
         </p>
       </div>
       <div class="news">
-        <p>${this._dataNews.content}...</p>
-        <button class="btn">selengkapnya</button>
+        <p>${this._dataNews.content === null ? "" : this._dataNews.content}...</p>
+       
         </div>
       </div>
-     </div>
     </div>
     `;
   }
