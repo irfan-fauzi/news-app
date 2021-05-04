@@ -23,9 +23,7 @@ class GridNews extends HTMLElement{
       img{
         width: 100%;
       }
-      :host .container:nth-child(1){
-        background: yellow;
-     }
+      
     </style>
     <div class="container">
       <div class="img-wrap">

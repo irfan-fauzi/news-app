@@ -21,7 +21,17 @@ class NewsList extends HTMLElement{
   }
 
   render(){
-    this.shadowRoot.innerHTML = "";
+    this.shadowRoot.innerHTML = `
+      <style>
+        :host{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        grid-news:nth-of-type(2){
+          background: red;
+        }
+      </style>
+    `;
     this._dataNews.forEach(data => {
       const gridNews = document.createElement("grid-news");
       gridNews.dataNews = data;
