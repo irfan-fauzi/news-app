@@ -1,28 +1,24 @@
 class GridNews extends HTMLElement{
 
-  constructor(){
-    super();
-    this.shadowDom = this.attachShadow({
-      mode: "open"
-    });
-  }
-
+  
   set dataNews(data){
     this._dataNews = data;
     this.render();
   }
 
   render(){
-   // let n = myDate.toDateString();
-    this.shadowDom.innerHTML = `
+   
+    this.innerHTML = `
     <style>
       *{
         margin: 0;
         padding: 0;
       }
       img{
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
       }
+     
       
     </style>
     <div class="container">
@@ -35,9 +31,7 @@ class GridNews extends HTMLElement{
           ${this._dataNews.author === null ? "" : this._dataNews.author}
         </p>
       </div>
-      <div class="news">
-        <p>${this._dataNews.content === null ? "" : this._dataNews.content}...</p> 
-      </div>
+      
     </div>
     `;
   }

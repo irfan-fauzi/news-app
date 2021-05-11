@@ -6,4 +6,19 @@
 body {
   background: #fff;
 }
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 850px 1fr;
+      grid-template-columns: 850px 1fr;
+  max-width: 1150px;
+  margin: 1rem auto;
+  gap: 10px;
+}
+
+.aside-container {
+  border: olive solid 1px;
+  padding: 10px;
+}
 /*# sourceMappingURL=index.css.map */

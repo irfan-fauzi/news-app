@@ -22,18 +22,19 @@ class Header extends HTMLElement{
     }
     :host{
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       height: 70px;
       width: 100%;
-      background: #021d61;
+      background: #0d1336;
       color: #fff;
     }
     h2{
-      font-size: 2rem;
+      font-size: 2.2rem;
+      margin-left: 1.5rem;
     }
     </style>
-    <h2>Berita Hari ini</h2>
+    <h2>Time News</h2>
     `
   }
 }

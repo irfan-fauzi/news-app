@@ -1,9 +1,11 @@
 import GetData from '../script/getdata/get-data.js';
 import './components/news-list.js';
+import './components/aside.js';
 
 const main = () => {
   
   const newsList = document.querySelector('news-list');
+  const asideEl = document.querySelector('aside-el');
 
   window.addEventListener("DOMContentLoaded", async function(){
     try{
@@ -16,10 +18,12 @@ const main = () => {
 
   const renderResult = hasil => {
     newsList.dataNews = hasil;
+    asideEl.dataNews = hasil;
   }
 
   const fallbackResult = msg => {
-    newsList.renderError(msg)
+    newsList.renderError(msg);
+    asideEl.renderError(msg);
   }
 }
 
