@@ -21,4 +21,11 @@ main {
   border: olive solid 1px;
   padding: 10px;
 }
+
+@media only screen and (max-width: 992px) {
+  main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
 /*# sourceMappingURL=index.css.map */

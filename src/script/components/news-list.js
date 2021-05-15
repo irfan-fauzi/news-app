@@ -27,8 +27,9 @@ class NewsList extends HTMLElement{
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           gap: 1rem;
-          
+          width: 100%;
         }
+       
         grid-news:nth-of-type(1){
           grid-column: 1/4;
           position: relative;
@@ -53,7 +54,7 @@ class NewsList extends HTMLElement{
         }
         
         grid-news:nth-of-type(1)::after{
-          content: "sayaayayya";
+          content: "";
           width: 100%;
           height: 100%;
           position: absolute;
@@ -61,7 +62,18 @@ class NewsList extends HTMLElement{
           background: black;
           opacity: 0.7
         }
-
+        @media only screen and (max-width: 992px){
+          :host{
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          }
+          grid-news:nth-of-type(1){
+            grid-column: 1;
+            position: relative;
+          }
+          .news-2, .news-3, .news-4, news-5, news-6, news-7 h2{
+            font-size: 0.8rem;
+          }
+        }
       </style>
     `;
     let fil = this._dataNews.filter((el, index) => {

@@ -16,15 +16,16 @@ class GridNews extends HTMLElement{
       }
       img{
         max-width: 100%;
-        max-height: 100%;
+        height: auto;
       }
       a{
         text-decoration: none;
         color: black;
       }
-      h2{
-        
+      .container{
+        width: 100%;
       }
+     
     </style>
     <div class="container">
       <a href=${this._dataNews.url} target="_blank">

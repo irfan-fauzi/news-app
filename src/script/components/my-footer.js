@@ -48,7 +48,7 @@ class MyFooter extends HTMLElement{
         letter-spacing: 2px;
       }
       a{
-        text-decoration: none;
+        text-decoration: uppercase;
       }
     </style>
     
