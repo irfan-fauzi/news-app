@@ -38,7 +38,7 @@ class Aside extends HTMLElement{
       }
     </style>
     <div class="img-wrap">
-      
+      <img src="https://raw.githubusercontent.com/irfan-fauzi/news-app/main/src/img/logo.png" alt="logo">
     </div>
     `;
     this._dataNews.forEach(data => {
