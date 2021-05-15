@@ -1,0 +1,3 @@
+class MyFooter extends HTMLElement{
+  
+}

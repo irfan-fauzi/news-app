@@ -17,7 +17,11 @@ class AsideNews extends HTMLElement{
         }
         h4{
           font-size: 0.9rem;
-
+          color: black;
+        }
+        a{
+          text-decoration: none;
+          color: black;
         }
       </style>
       <div class="aside-news">

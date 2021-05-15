@@ -18,10 +18,14 @@ class GridNews extends HTMLElement{
         max-width: 100%;
         max-height: 100%;
       }
-     
+     a{
+      text-decoration: none;
+      color: black;
+     }
       
     </style>
     <div class="container">
+      <a href=${this._dataNews.url} target="_blank">
       <div class="img-wrap">
         <img src=${this._dataNews.urlToImage} alt="kompas">
       </div>
@@ -31,7 +35,7 @@ class GridNews extends HTMLElement{
           ${this._dataNews.author === null ? "" : this._dataNews.author}
         </p>
       </div>
-      
+      </a>
     </div>
     `;
   }

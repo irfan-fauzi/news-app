@@ -35,7 +35,6 @@ class NewsList extends HTMLElement{
          
         }
        
-
         .news-0 h2{
           position: absolute;
           font-size: 2.9rem;
