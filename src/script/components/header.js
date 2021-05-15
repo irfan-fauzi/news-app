@@ -24,17 +24,29 @@ class Header extends HTMLElement{
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      height: 70px;
+      height: 80px;
       width: 100%;
-      background: #0d1336;
+      background: #202021;
       color: #fff;
     }
     h2{
       font-size: 2.2rem;
-      margin-left: 1.5rem;
+    }
+    div{
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    h4{
+      font-weight: 100;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
     }
     </style>
-    <h2>Time News</h2>
+    <div>
+      <h2>Time News</h2>
+      <h4>Terdepan dalam mengabarkan</h4>
+    </div>
     `
   }
 }

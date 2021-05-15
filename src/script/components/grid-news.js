@@ -18,11 +18,13 @@ class GridNews extends HTMLElement{
         max-width: 100%;
         max-height: 100%;
       }
-     a{
-      text-decoration: none;
-      color: black;
-     }
-      
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      h2{
+        
+      }
     </style>
     <div class="container">
       <a href=${this._dataNews.url} target="_blank">
