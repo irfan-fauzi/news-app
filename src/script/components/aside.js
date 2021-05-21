@@ -36,6 +36,12 @@ class Aside extends HTMLElement{
       .img-wrap{
         width: 100%;
       }
+
+      @media only screen and (max-width: 768px){
+        .img-wrap{
+          width: 100px;
+        }
+      }
     </style>
     <div class="img-wrap">
       <img src="https://raw.githubusercontent.com/irfan-fauzi/news-app/main/src/img/logo.png" alt="logo">

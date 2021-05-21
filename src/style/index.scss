@@ -23,3 +23,9 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+@media only screen and (max-width: 768px){
+  main{
+    max-width: 680px;
+  }
+}

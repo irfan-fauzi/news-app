@@ -23,6 +23,10 @@ class NewsList extends HTMLElement{
   render(){
     this.shadowRoot.innerHTML = `
       <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
         :host{
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -64,16 +68,38 @@ class NewsList extends HTMLElement{
         }
         @media only screen and (max-width: 992px){
           :host{
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           }
           grid-news:nth-of-type(1){
             grid-column: 1;
             position: relative;
           }
-          .news-2, .news-3, .news-4, news-5, news-6, news-7 h2{
-            font-size: 0.8rem;
-          }
+          
         }
+
+        @media only screen and (max-width: 768px){
+         
+          grid-news:nth-of-type(1)::after{
+            display: none;
+          }
+          grid-news:nth-of-type(1){
+            position: static;
+          }
+          .news-0 h2{
+            font-size: 1rem;
+            color: black;
+            text-shadow: none;
+            z-index: 0;
+            position: static;
+            padding: 0;
+          }
+          .news-0 p{
+            display: block;
+          }
+
+        }
+        
+
       </style>
     `;
     let fil = this._dataNews.filter((el, index) => {
@@ -84,8 +110,6 @@ class NewsList extends HTMLElement{
         gridNews.setAttribute("class", `news-${index}`);
         gridNews.dataNews = data;
         this.shadowRoot.appendChild(gridNews)
-      
-      
     })
   }
   

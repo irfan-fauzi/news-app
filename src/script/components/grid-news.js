@@ -15,8 +15,7 @@ class GridNews extends HTMLElement{
         padding: 0;
       }
       img{
-        max-width: 100%;
-        height: auto;
+        width: 100%;
       }
       a{
         text-decoration: none;
@@ -24,13 +23,18 @@ class GridNews extends HTMLElement{
       }
       .container{
         width: 100%;
+        overflow: hidden;
       }
+      .img-wrap{
+        width: 100%;
+      }
+
      
     </style>
     <div class="container">
       <a href=${this._dataNews.url} target="_blank">
       <div class="img-wrap">
-        <img src=${this._dataNews.urlToImage} alt="kompas">
+        <img src=${this._dataNews.urlToImage === null ? `https://images.pexels.com/photos/755385/pexels-photo-755385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940` : this._dataNews.urlToImage } alt="img" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/755385/pexels-photo-755385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';">
       </div>
       <div class="title">
         <h2>${this._dataNews.title}</h2>

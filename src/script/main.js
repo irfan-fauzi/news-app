@@ -11,6 +11,7 @@ const main = () => {
     try{
       const hasil = await GetData.getNews();
       renderResult(hasil)
+      console.log(hasil)
     } catch(err){
       fallbackResult(err)
     }
