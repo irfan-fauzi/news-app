@@ -34,7 +34,7 @@ class GridNews extends HTMLElement{
     <div class="container">
       <a href=${this._dataNews.url} target="_blank">
       <div class="img-wrap">
-        <img src=${this._dataNews.urlToImage === null ? `https://images.pexels.com/photos/755385/pexels-photo-755385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940` : this._dataNews.urlToImage } alt="img" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/755385/pexels-photo-755385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';">
+        <img src=${this._dataNews.urlToImage} alt="img" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/755385/pexels-photo-755385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';">
       </div>
       <div class="title">
         <h2>${this._dataNews.title}</h2>
