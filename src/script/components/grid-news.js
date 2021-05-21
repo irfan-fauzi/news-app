@@ -7,7 +7,9 @@ class GridNews extends HTMLElement{
   }
 
   render(){
-   
+    
+    
+
     this.innerHTML = `
     <style>
       *{
